@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1601657025 source:c:\users\netoc\desktop\estudos\linguagem c\programação procedimental\autran 2020\prova 2\q2\questao2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

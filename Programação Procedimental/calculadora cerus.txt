@@ -1,0 +1,123 @@
+/******************************************************************************
+Criado por Carlos Augusto Gomes Neto em 25/09/2020
+O programa é uma calculadora com menu onde o usuário realizará as operações desejadas
+O esperado é um número retornado
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 100
+
+/*------Prototipos--------*/
+float soma( float a, float b);
+float sub( float a, float b);
+float divi( float a, float b);
+float prod( float a, float b);
+
+float soma( float a, float b )
+{
+    float result = 0;
+    
+    printf("Digite os numeros que deseja somar: \n");
+    scanf("%f %f", &a, &b);
+    
+    result = a + b;
+    
+    printf("A soma de %f e %f eh %f", a, b, result);
+}
+
+float sub( float a, float b )
+{
+    float result = 0;
+    
+    printf("Digite os numeros que deseja subtrair: \n");
+    scanf("%f %f", &a, &b);
+    
+    result = a - b;
+    
+    printf("A subtracao de %f e %f eh %f", a, b, result);
+}
+
+float divi( float a, float b )
+{
+    float result = 0;
+    
+    printf("Digite os numeros que deseja dividir: \n");
+    scanf("%f %f", &a, &b);
+    
+    result = a/b;
+    
+    printf("A divisão de %f por %f eh %f", a, b, result);
+}
+
+float prod( float a, float b )
+{
+    float result = 0;
+    
+    printf("Digite os numeros que deseja multiplicar: \n");
+    scanf("%f %f", &a, &b);
+    
+    result = a*b;
+    
+    printf("A multiplicacao de %f por %f eh %f", a, b, result);
+}
+
+int fat( int a )
+{
+    if (a <= 1)
+    {
+        return 1;
+    }    
+        
+    else
+    {
+        return fat(a-1) * a;
+    }
+}
+
+int
+main()
+{
+    int opcao = 0;
+    int ai = 0;
+    float a = 0;
+    float b = 0;
+    
+    printf("Bem vindo a calculadora ceru's.Escolha uma opção:\n1-Soma\n2-Subtracao\n3-Divisao\n4-Produto\n5-Fatorial\n");
+    scanf("%d", &opcao);
+    
+    while ()
+    {
+        switch(opcao)
+        {
+        case 1:
+            soma(a,b);
+            break;
+    
+        case 2:
+            sub(a,b);
+            break;
+    
+        case 3:
+            divi(a,b);
+            break;
+    
+        case 4:
+            prod(a,b);
+            break;
+    
+        case 5:
+            printf("Digite o numero que deseja saber a fatorial: ");
+            scanf("%d", &ai);
+            printf("A fatorial eh %d", fat(ai));
+            break;
+        }
+    }
+    
+    return 0;
+}
+
+
+
+
