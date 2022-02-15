@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h2>Add User With Validation</h2>
+    <form action="#" th:action="@{/lab06/addValidDomainObject}"
+        th:object="${CDomainClass}" method="GET">
+
+        <table>
+            <tr>
+                <td>DATA:</td>
+                <td><input type="date" th:field="*{data}" /></td>
+                <td th:if="${#fields.hasErrors('data')}" th:errors="*{data}">DATE
+                    Error</td>
+            </tr>
+            <tr>
+                <td>CEP:</td>
+                <td><input type="text" th:field="*{cep}" /></td>
+                <td th:if="${#fields.hasErrors('cep')}" th:errors="*{cep}">CEP
+                    Error</td>
+            </tr>
+            <tr>
+                <td>Valor:</td>
+                <td><input type="text" th:field="*{valor}" /></td>
+                <td th:if="${#fields.hasErrors('valor')}" th:errors="*{valor}">
+                    Valor Error</td>
+            </tr>
+            <tr>
+                <td><button type="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
